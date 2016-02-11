@@ -1,17 +1,12 @@
 package com.javarush.test.level14.lesson08.bonus01;
 
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.*;
 
-/* Нашествие эксепшенов
-Заполни массив exceptions 10 различными эксепшенами.
-Первое исключение уже реализовано в методе initExceptions.
+/*
+Заполните массив exceptions 10 различными эксепшенами. Первое исключение уже реализовано в методе initExceptions
 */
-
 public class Solution
 {
     public static List<Exception> exceptions = new ArrayList<Exception>();
@@ -38,81 +33,99 @@ public class Solution
         }
         try
         {
-            ArrayList<String> a = new ArrayList<String>();
-            ArrayList<Integer> b = new ArrayList<Integer>();
-            b.contains(a.get(0));
+            int [] a = new int[-1];
         }
         catch (Exception e)
         {
             exceptions.add(e);
         }
+
         try
         {
-            Integer test = null;
-            Integer test2 = 0;
-            test2.sum(test, test2);
+            int [] a = new int[4];
+            for (int i = 0; i <= a.length; i++)
+                a[i] = i;
         }
         catch (Exception e)
         {
             exceptions.add(e);
         }
+
         try
         {
-            String test = "test";
-            int test2 = Integer.parseInt(test);
+            LinkedList list = new LinkedList();
+            list.get(-1);
         }
         catch (Exception e)
         {
             exceptions.add(e);
         }
+
         try
         {
-            String test = "test";
-            char test2 = test.charAt(100);
+            Object x = new Integer(0);
+            System.out.println((String)x);
         }
         catch (Exception e)
         {
             exceptions.add(e);
         }
+
+
+
         try
         {
-            Object i[] = new String[0];
-            i[1] = new Integer(0);
+            Object szStr[] = new String[10];
+            szStr[0] = new Character('*');
+        }
+
+        catch (Exception e)
+        {
+            exceptions.add(e);
+        }
+
+
+
+        try
+        {
+            int[] nNulArray = new int[5];
+            nNulArray = null;
+            int i = nNulArray.length;
         }
         catch (Exception e)
         {
             exceptions.add(e);
         }
+
+
+
         try
         {
-            Object i = new Integer(0);
-            System.out.print((String) i);
+            String szShortString = "123";
+            char chr = szShortString.charAt(10);
         }
         catch (Exception e)
         {
             exceptions.add(e);
         }
+
         try
         {
-            Solution test = new Solution();
-            test.clone();
+            String s = "FOOBAR";
+            int i = Integer.parseInt(s);
+            // this line of code will never be reached
+            System.out.println("int value = " + i);
         }
         catch (Exception e)
         {
             exceptions.add(e);
         }
-        try
-        {
-            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-            Date lowDate = sdf.parse("test");
-        }
-        catch (Exception e)
-        {
-            exceptions.add(e);
-        }
-        try
-        {
-            InputStream stream = new FileInputStream("test");
+
+        try {
+
+
+            throw new IllegalStateException("MyException");
+
         }
         catch (Exception e)
         {
