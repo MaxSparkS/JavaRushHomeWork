@@ -1,6 +1,8 @@
 package com.javarush.test.level14.lesson08.home10;
+
 import java.util.LinkedList;
 import java.util.List;
+
 /* Исправить 4 ошибки
 Исправить 4 ошибки в конструкторе NotIncapsulatedClass и отрефактори код
 1. В класе NotIncapsulatedClass создать private методы initList(List<Number> list), printListValues, processCastedObjects.
@@ -22,12 +24,14 @@ import java.util.List;
 - учти, что для объекта типа Float нужно вывести "Is float value defined? " + [Float_object].isNaN()
 - учти, что для объекта типа Double нужно вывести "Is double value infinite? " + [Double_object].isInfinite().
 */
+
 public class Solution
 {
     public static void main(String[] args)
     {
         new NotIncapsulatedClass();
     }
+
     public static class NotIncapsulatedClass
     {
         public NotIncapsulatedClass()
@@ -38,11 +42,13 @@ public class Solution
             list.add(new Double("123e-445632"));
             list.add(new Float(-90 / -3));
             list.remove(new Double("123e-445632"));
+
             //2 - Исправь 2 ошибки
             for (int i = 0; i <= list.size(); i--)
             {
                 System.out.println(list.get(i));
             }
+
             //3
             for (Number object : list)
             {
