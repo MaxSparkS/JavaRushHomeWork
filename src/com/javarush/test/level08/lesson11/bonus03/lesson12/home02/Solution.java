@@ -1,4 +1,4 @@
-package com.javarush.test.level15.lesson12.home02;
+package com.javarush.test.level08.lesson11.bonus03.lesson12.home02;
 
 /* Тренировка мозга
 Найти логическую ошибку: метод doAction в реализации интерфейса Movable должен выдавать "moving".

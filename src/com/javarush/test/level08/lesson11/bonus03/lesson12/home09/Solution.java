@@ -1,4 +1,4 @@
-package com.javarush.test.level15.lesson12.home09;
+package com.javarush.test.level08.lesson11.bonus03.lesson12.home09;
 
 /* Парсер реквестов
 Считать с консоли URl ссылку.
